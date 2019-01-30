@@ -1,0 +1,15 @@
+/*
+**HEADER
+*/
+.img-back {
+    background-image: url("../img/team/team.jpg");
+    background-position: center, center;
+}
+
+.rounded-circle {
+    height:160px;
+}
+
+/*
+**FOOTER
+*/

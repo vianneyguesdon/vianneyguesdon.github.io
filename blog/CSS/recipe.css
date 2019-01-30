@@ -1,0 +1,50 @@
+/*
+** CONTENT
+*/
+p {
+    margin: 0px;
+}
+
+/*
+** HEADER
+*/
+.img-back {
+    background-image: url("../img/recipes/paella/paella-header.jpg")
+}
+
+/*
+** CONTENT
+*/
+.prep {
+    background-color: grey;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.fas {
+    padding:3px;
+}
+
+.ingredients {
+    background-color: grey;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+.step {
+    margin-bottom: 10px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    background-color: grey;
+    color: white;
+    padding: 2px;
+}

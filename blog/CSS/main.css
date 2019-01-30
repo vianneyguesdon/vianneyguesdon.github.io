@@ -1,0 +1,189 @@
+/*
+**BASE
+*/
+body{
+    font-family: oswald;
+    font-weight: 200;
+    margin: 0px;
+}
+
+h1,h2{
+    font-family: courgette;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    font-family: courgette;
+    color: black;
+}
+
+h5 {
+    font-family: courgette;
+    color: white;
+}
+
+h6 {
+    font-family: courgette;
+    color: black;
+}
+
+input:focus {
+	outline: none;
+}
+
+.form-inline input:focus {
+    border-color: white;
+}
+
+/*
+**NAV
+*/
+.navbar-brand {
+    font-family: courgette;
+    text-decoration: none;
+}
+
+.navbar {
+   border-bottom:1px solid white;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+/*
+**HEADER
+*/
+.img-back {
+    background-image: url("../img/header.jpg");
+    background-position: center, center;
+}
+
+.filter {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 400px;
+}
+
+.logo {
+    width:50px;
+    height: auto;
+}
+
+.the-mag {
+    padding-top: 70px;
+}
+
+/*
+**CONTENT
+*/
+.img-fluid {
+    margin-bottom:20px;
+}
+
+img {
+    transition: transform 0.3s;
+  }
+  
+img:hover {
+    transform: scale(1.1);
+}
+
+.float-left {
+    height: 300px;
+}
+
+/*
+**FOOTER
+*/
+ul, a {
+    list-style: none;
+    padding: 0px;
+    color: white;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: black;
+}
+
+.fab {
+    color: black;
+}
+.btn-border {
+    border-color: white;
+}
+
+/*
+**BOUTONS LOGO PARTAGER EN COULEURS (avec border pour display instagram sur fond noir)
+*/
+.link-fa {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-fa:hover {
+    background-color:#3b5999;
+    border : 1px solid #3b5999;
+}
+
+.link-fa:hover i {
+    color: white;
+}
+
+.link-in {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-in:hover {
+    background-color:black;
+    border : 1px solid white; 
+}
+
+.link-in:hover i {
+    color: white;
+}
+
+.link-you {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-you:hover {
+    background-color:#cd201f;
+    border : 1px solid #cd201f; 
+}
+
+.link-you:hover i {
+    color: white;
+}
+
+.link-twi {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-twi:hover {
+    background-color:#55acee;
+    border : 1px solid #55acee;
+}
+
+.link-twi:hover i {
+    color: white;
+}

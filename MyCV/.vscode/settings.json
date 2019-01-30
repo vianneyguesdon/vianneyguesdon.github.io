@@ -1,0 +1,6 @@
+{
+    "html.suggest.html5": false,
+    "html.autoClosingTags": false,
+    "html.format.enable": false,
+    "editor.quickSuggestions": false
+}

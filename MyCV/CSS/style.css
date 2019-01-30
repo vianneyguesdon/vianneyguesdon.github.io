@@ -1,0 +1,267 @@
+@font-face {
+	font-family: 'Medium';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Regular';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+/* 
+BASE
+*/
+body{
+    font-family: 'Regular';
+    margin:0px;
+}
+
+p{
+    margin:0;
+}
+
+/* 
+NAV MENU
+*/
+.menu {
+    color:white;
+    background-color: #0475ba;
+    padding:20px;
+    margin-top: 0px;
+}
+
+.menu>ul {
+    display:none;
+}
+
+/* 
+SECTION PROFILE
+*/
+.profile {
+    text-align:center;
+    font-family:medium;
+    padding: 0px 0px 50px 0;
+}
+
+.profile>div>h2{
+    color:#0475ba;
+    font-family:medium;
+}
+
+.profile>div>h1{
+    font-family:medium;
+    font-size:2.2em;
+}
+
+/* 
+SECTION PRESENTATION
+*/
+.presentation{
+    background-color: #0475ba;
+    color: white;
+    padding: 40px 40px 80px 40px;
+    
+}
+
+.presentation>h2{
+    background-color: #0475ba;
+    color:white;
+    text-align:center;
+}
+
+img{
+    border-radius:250px;
+    box-shadow: 6px 6px 6px grey;
+}
+
+/* 
+SECTION EXPERIENCE
+*/
+.experience {
+    padding: 60px 7px 60px 7px;
+}
+
+.experience>h2{
+    color:#0475ba;
+    text-align:center;
+}
+
+.experience>h3{
+    font-family:medium;
+}
+
+.experience>ul{
+    list-style:none;
+    padding: 10px 0px 10px 0px;
+}
+
+.experience>p{
+    margin-top:20px;
+
+}
+
+.konexio-work, .internship{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* 
+SECTION FORMATION
+*/
+.formation{
+    background-color: #0475ba;
+    color: white;
+    padding: 60px 7px 60px 7px;
+}
+
+.licence, .bac{
+    display:flex;
+    justify-content:space-between;
+}
+
+.formation>div>li{
+    list-style:none;
+}
+
+.formation>h2{
+    text-align:center;
+}
+
+/* 
+SECTION PASSION
+*/
+.passion {
+    padding:70px 0px 70px 7px;
+}
+
+.passion>h2{
+    text-align:center;
+    color:#0475ba;
+}
+
+/* 
+SECTION FOOTER
+*/
+.footer{
+    background-color: #0475ba;
+    color:white;
+    padding: 70px 0px 30px 50px;
+}
+
+.footer>ul{
+    display:inline;
+}
+
+.footer>ul>a{
+    margin:5px;
+    color:white;
+    display:block;
+}
+
+
+.footer>ul>li>a{
+    color:white;
+    display:block;
+}
+
+.footer>ul>li>i{
+    margin-right:20px;
+}
+
+.footer>ul>li{
+    list-style:none;
+}
+
+@media (min-width: 992px) {
+
+    /*
+    BASE
+    */
+    body{
+        font-size:1em;
+    }
+
+    /*
+    NAV MENU
+    */
+    .menu{
+        display:flex;
+    }
+    .menu>ul{
+        display:flex;
+        list-style:none;
+        margin:0px;
+    }
+
+    .menu>ul>li>a{
+        padding:0px 10px 0px 0px;
+        text-decoration:none;
+        color:white
+    }
+
+    /*
+    SECTION PROFILE
+    */
+    .profile{
+        display:flex;
+        padding: 50px;
+        justify-content: space-evenly;
+    }
+
+    /*
+    SECTION PRESENTATIOH
+    */
+    .presentation {
+        background-color: #0475ba;
+        color: white;
+        padding: 40px 40px 80px 190px;
+    }
+    .presentation>h2 {
+        background-color: #0475ba;
+        color: white;
+        text-align:left;
+    }
+
+    /*
+    SECTION EXPERIENCE
+    */
+    .experience {
+        background-color: white;
+        color: black;
+        padding: 40px 40px 80px 190px;
+    }
+    .experience>h2 {
+        background-color: white;
+        color: #0475ba;
+        text-align:left;
+    }
+
+    /*
+    SECTION FORMATION
+    */
+    .formation {
+        background-color: #0475ba;
+        color: white;
+        padding: 40px 40px 80px 190px;
+    }
+    .formation>h2 {
+        background-color: #0475ba;
+        color: white;
+        text-align:left;
+    }
+
+    /*
+    SECTION PASSION
+    */
+    .passion {
+        background-color: white;
+        color: black;
+        padding: 40px 40px 80px 190px;
+    }
+    .passion>h2 {
+        background-color: white;
+        color: #0475ba;
+        text-align:left;
+    }
+}
