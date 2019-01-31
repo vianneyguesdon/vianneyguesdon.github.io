@@ -1,0 +1,141 @@
+/*
+** BASE
+*/
+body {
+    font-family: krub;
+}
+
+h1, h2 {
+    color: white
+}
+
+h3 {
+    margin: 60px 0px;
+}
+
+h5 {
+    color: white;
+}
+
+/*
+** HEADER
+*/
+.img-back {
+    background-image: url(../img/real\ estate.jpg);
+    background-position: center, center;
+}
+
+.filter {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 500px;
+}
+
+.title {
+    padding-top: 130px;
+    text-align: center;
+}
+
+/*
+**FOOTER
+*/
+.footer {
+    background-color: black;
+}
+
+.fab {
+    color: black;
+}
+.btn-border {
+    border-color: white;
+}
+
+.form-news {
+    max-width: 160px;
+}
+
+/*
+**BOUTONS LOGO PARTAGER EN COULEURS (avec border pour display instagram sur fond noir)
+*/
+ul {
+    padding: 0px;
+}
+
+.social ul li {
+    display: inline;
+}
+
+ul li a {
+    list-style: none;
+    padding: 0px;
+    color: white;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.link-fa {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-fa:hover {
+    background-color:#3b5999;
+    border : 1px solid #3b5999;
+}
+
+.link-fa:hover i {
+    color: white;
+}
+
+.link-in {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-in:hover {
+    background-color:black;
+    border : 1px solid white; 
+}
+
+.link-in:hover i {
+    color: white;
+}
+
+.link-you {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-you:hover {
+    background-color:#cd201f;
+    border : 1px solid #cd201f; 
+}
+
+.link-you:hover i {
+    color: white;
+}
+
+.link-twi {
+    padding: 8px 13px;
+    border-radius: 5px;
+    background-color: white;
+    border : 1px solid white;
+    transition: 0.2s;
+}
+
+.link-twi:hover {
+    background-color:#55acee;
+    border : 1px solid #55acee;
+}
+
+.link-twi:hover i {
+    color: white;
+}
