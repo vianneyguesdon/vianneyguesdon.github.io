@@ -16,7 +16,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 h4 {
@@ -41,11 +41,11 @@ hr {
 
 .filter {
     background-color: rgba(0, 0, 0, 0.6);
-    height: 500px;
+    height: 570px;
 }
 
 .title {
-    padding-top: 140px;
+    padding-top: 170px;
     text-align: center;
 }
 
