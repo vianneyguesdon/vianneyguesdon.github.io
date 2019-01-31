@@ -154,3 +154,14 @@ ul li a {
 .link-twi:hover i {
     color: white;
 }
+
+.copyright {
+    color: white;
+    font-size : 8px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.copyright p {
+    margin: 0px;
+}
