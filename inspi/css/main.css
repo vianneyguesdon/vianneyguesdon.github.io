@@ -1,0 +1,25 @@
+.colored {
+    height: 600px;
+    background-image: linear-gradient(to left, #8a40c6, #7c41cf, #6943d8, #4e46e2, #1249eb);
+    clip-path: polygon(0 0, 100% 0%, 100% 84%, 0 100%);
+}
+
+.white {
+    background-color:white;
+    height: 400px;
+}
+
+.colored2 {
+    height: 600px;
+    background-image: linear-gradient(to left, #8a40c6, #7c41cf, #6943d8, #4e46e2, #1249eb);
+    clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 100%);
+}
+
+.colored, .white, .colored2 {
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    padding-top: 200px;
+}
