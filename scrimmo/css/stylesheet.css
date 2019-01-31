@@ -31,8 +31,16 @@ h5 {
 }
 
 .title {
-    padding-top: 130px;
+    padding-top: 140px;
     text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar {
+    border-bottom: 1px solid white;
 }
 
 /*
