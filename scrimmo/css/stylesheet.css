@@ -13,6 +13,7 @@ h1 {
 h2 {
     color: white;
     font-weight: 400;
+    padding-top: 10px;
 }
 
 h3 {
@@ -45,7 +46,7 @@ hr {
 }
 
 .title {
-    padding-top: 170px;
+    padding-top: 180px;
     text-align: center;
 }
 
