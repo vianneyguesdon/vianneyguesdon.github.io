@@ -10,7 +10,11 @@ h1, h2 {
 }
 
 h3 {
-    margin: 60px 0px;
+    margin-top: 60px;
+}
+
+h4 {
+    margin-top: 10px;
 }
 
 h5 {
@@ -41,6 +45,10 @@ h5 {
 
 .navbar {
     border-bottom: 1px solid white;
+}
+
+.img-first {
+    margin-top: 80px;
 }
 
 /*
@@ -76,7 +84,6 @@ ul li a {
     list-style: none;
     padding: 0px;
     color: white;
-    text-decoration: underline;
     list-style: none;
 }
 
