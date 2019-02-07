@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400,700|Merriweather:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/stylesheet.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
@@ -53,24 +54,24 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h3>We provide real estate analytics to assist individuals in asset management
+                <h3>We provide real estate analytics to assist individuals in asset management</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-6 text-center">
+            <div id="housing" class="col-12 col-lg-6 text-center wow fadeInLeft data-wow-delay=10s ">
                 <img src="./img/appartment.jpg" class="img-fluid img-first"/>
                 <h4>Housing Markets</h4>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quisquam officia? Sed rerum officia tenetur perspiciatis adipisci reiciendis deleniti maiores, vitae doloremque. Amet ullam quisquam deserunt inventore adipisci doloremque laboriosam.</p>
             </div>
-            <div class="col-12 col-lg-6 text-center">  
+            <div id="office" class="col-12 col-lg-6 text-center wow fadeInRight">  
                 <img src="./img/office.jpg" class="img-fluid img-first"/>
                 <h4>Offices Markets</h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur obcaecati maiores nulla, est, provident voluptatem aliquid ipsum eius nobis rem eos labore aspernatur, fugit assumenda doloribus et facere sunt enim.</p>
             </div>
         </div>
         <hr/>
-        <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3 text-center">
+        <div id="predictive" class="row">
+            <div class="col-12 col-lg-6 offset-lg-3 text-center wow fadeInLeft">
                 <img src="./img/prediction.png" class="img-fluid"/>
                 <h4>Predictive Models</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, accusamus esse corporis et nisi quas velit, similique explicabo voluptate laboriosam tempora quos nulla! Aliquid harum accusamus reprehenderit similique rerum deleniti.</p>
@@ -125,7 +126,11 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="./js/wow.min.js"></script> 
+<script src="./js/jquery.waypoints.min.js"></script>
+<script src="./js/main.js"></script>  
+
 </body>
 
 </html>
