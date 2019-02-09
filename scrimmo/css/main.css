@@ -3,6 +3,8 @@
 */
 body {
     font-family: krub;
+    margin: 0px,
+    
 }
 
 h1 {
@@ -28,7 +30,7 @@ h5 {
     color: white;
 }
 
-hr {
+h6 {
     margin : 65px 0px;
 }
 
@@ -36,13 +38,13 @@ hr {
 ** HEADER
 */
 .img-back {
-    background-image: url(../img/real\ estate.jpg);
+    background-image: url(../img/real-estate.jpg);
     background-position: center, center;
     height: 100vh;
 }
 
 .filter {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
 }
 
@@ -97,9 +99,11 @@ ul {
 }
 
 ul li a {
-    list-style: none;
     padding: 0px;
     color: white;
+}
+
+ul li {
     list-style: none;
 }
 
