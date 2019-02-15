@@ -13,12 +13,18 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-6 col-lg-2">
+                <img class="logo" src="./img/BLOOM-détouré-copie-1-1024x656.png" alt="logo de tortue"/>
+            </div>
+        </div>
     </header>
     <section class="container">
         <div class="row">
             <div class="col-12 title text-center">
-                <h1>Découvrez ce que vos députés ont voté sur la pêche</h1>
+                <h1>Vos députés protègent-ils les océans ?</h1>
+                <p> Texte explicatif : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ipsa numquam reiciendis, dolorum quos facere voluptatibus repudiandae illo tenetur velit corporis. Dolore magnam tempore aperiam eligendi voluptate perferendis, et odit?</p>
                 <input id="search" type="text" class="form-control" placeholder="Recherchez un député ou parti politique">
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center">
@@ -27,9 +33,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Michèle Alliot-Marie</h5>
                         <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary bloom-button">votes</a>
+                        <p class="stat-medium">60%</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
                         <p class="invisible">michele michèle alliot marie</p>
-                        <img src="./img/fish-smile.jpg" alt="poisson vivant" class="alive"/>
                     </div>
                 </div>
             </div>
@@ -39,9 +45,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Eric Andrieu</h5>
                         <p class="card-text">Social et démocrate</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="stat-medium">54%</p>
+                        <a href="#" class="btn btn-secondary">détails</a>
                         <p class="invisible">eric éric andrieu</p>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
@@ -51,9 +57,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Marie-Christine Arnautu</h5>
                         <p class="card-text">Les verts</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="stat-good">83%</p>
+                        <a href="#" class="btn btn-secondary">voir les votes</a>
                         <p class="invisible">marie christine arnautu</p>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
@@ -63,9 +69,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Isabelle Thomas</h5>
                         <p class="card-text">Parti populaire Européen</p>
+                        <p class="stat-bad">17%</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
                         <p class="invisible">isabelle thomas</p>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
@@ -75,9 +81,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Alain Cadec</h5>
                         <p class="card-text">Parti populaire Européen</p>
+                        <p class="stat-medium">37%</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
                         <p class="invisible">alain cadec</p>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
@@ -87,8 +93,8 @@
                     <div class="card-body">
                         <h5 class="card-title">José Bové</h5>
                         <p class="card-text">Les Verts</p>
+                        <p class="stat-good">87%</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                         <p class="invisible">jose bove les verts josé bové</p>
                     </div>
                 </div>
@@ -99,8 +105,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Younous Omarjee</h5>
                         <p class="card-text">Extrême Gauche</p>
-                        <a href="omarjee.html" class="btn btn-secondary bloom-button">ses votes</a>
-                        <img src="./img/fish-smile.jpg" alt="poisson vivant" class="alive"/>
+                        <p class="stat-bad">23%</p>
+                        <a href="omarjee.html" class="btn btn-secondary">ses votes</a>
                         <p class="invisible">younous omarjee extreme extrême gauche</p>
                     </div>
                 </div>
@@ -111,8 +117,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Michèle Alliot-Marie</h5>
                         <p class="card-text">Parti populaire Européen</p>
+                        <p class="stat-bad">33%</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
@@ -122,147 +128,25 @@
                     <div class="card-body">
                         <h5 class="card-title">Michèle Alliot-Marie</h5>
                         <p class="card-text">Parti populaire Européen</p>
+                        <p class="stat-medium">43%</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary bloom-button">ses votes</a>
-                        <img src="./img/fish-smile.jpg" alt="poisson vivant" class="alive"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
-                        <img src="./img/dead-fish.png" alt="poisson mort" class="dead"/>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-8 col-lg-4 offset-lg-5">
+                <img class="img-float2" src="./img/tortue.jpg" alt="logo de tortue"/>
+                <img class="img-float1" src="./img/cropped fish" alt="logo de poisson"/>
+                <img class="img-float3" src="./img/octopus.png" alt="logo de pieuvre"/>
+            </div>
+        </div>
+    </footer>
 
     <script src="./js/jquery-3.3.1.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>

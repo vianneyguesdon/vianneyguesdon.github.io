@@ -7,7 +7,7 @@ body {
 
 .title {
     color: #E31C67;
-    padding: 40px 0px;
+    padding-bottom: 40px;
 }
 
 h1 {
@@ -36,15 +36,41 @@ h2 {
     border: #E31C67;
 }
 
-.dead {
-    width: 60px;
-    padding-left: 20px;
+.logo {
+    height: 70px;
+    animation: floating1 6s ease-in-out 0s infinite alternate;
 }
 
-.alive {
-    border: #E31C67;
-    width: 80px;
-    padding-left: 20px;
+/*
+** POURCENTAGES
+*/
+
+.stat-good {
+    color: green;
+    display: inline;
+    font-size: 1.9em;
+    font-weight: bold;
+    padding-right: 30px;
+    vertical-align: middle;
+}
+
+.stat-medium {
+    color: orange;
+    display: inline;
+    font-size: 1.9em;
+    font-weight: bold;
+    padding-right: 30px;
+    vertical-align: middle;
+
+}
+.stat-bad {
+    color: red;
+    display: inline;
+    font-size: 1.9em;
+    font-weight: bold;
+    padding-right: 30px;
+    vertical-align: middle;
+
 }
 
 .invisible {
@@ -107,3 +133,90 @@ h2 {
     color: white;
     background: rgb(202, 90, 90);
 }
+
+
+
+/*
+** FLOATING IMAGE 
+*/
+.img-float1 {
+    box-sizing: border-box;
+    height: 40px;
+    z-index: 1;
+    animation: floating1 6s ease-in-out 0s infinite alternate;
+}
+.img-float2 {
+    box-sizing: border-box;
+    height: 40px;
+    z-index: 1;
+    animation: floating2 4s ease-in-out 0s infinite alternate;
+}
+.img-float3 {
+    box-sizing: border-box;
+    height: 40px;
+    z-index: 1;
+    animation: floating3 5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes floating1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes floating2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes floating3 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInAndOut {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-5%);
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes vex-rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
