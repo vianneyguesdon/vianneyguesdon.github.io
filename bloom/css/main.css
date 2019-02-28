@@ -1,21 +1,38 @@
 /*
 ** MAIN PAGE
 */
+
 body {
     font-family: Oswald;
 }
 
 .title {
     color: #E31C67;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 h1 {
     margin-bottom:30px;
+    text-align: center;
 }
 
 h2 {
     font-size: 1.3em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: orange 
 }
 
 .fas {
@@ -25,8 +42,8 @@ h2 {
 .card {
     transition: transform 0.3s;
     margin: 10px 0px;
-  }
-  
+}
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -36,9 +53,75 @@ h2 {
     border: #E31C67;
 }
 
+.btn-secondary {
+    background-color: #4C6784;
+}
+
+.btn-secondary:hover {
+    background-color: #E31C67;
+    border: 1px solid #E31C67;
+}
+
 .logo {
     height: 70px;
     animation: floating1 6s ease-in-out 0s infinite alternate;
+}
+
+.intro {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-toggle {
+    width: 110px;
+    margin-left : 4px;
+}
+
+.button-reset, .button-ranking {
+    border: 1px solid grey;
+    margin-left: 4px;
+}
+
+#explication-note {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.signature {
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.separate-tous {
+    margin-right : 75px;
+}
+
+.img-cliquez {
+    width: 500px;
+}
+
+.legende {
+    margin-top: 10px;
+}
+
+.légende-titre {
+    text-decoration: underline
+}
+
+.p-légende {
+    margin: 1px;
+}
+
+.protecteur {
+    color: #4DAA57;
+}
+
+.destructeur {
+    color: #C1292E;
+}
+
+.abstention {
+    color: orange;
 }
 
 /*
@@ -81,57 +164,71 @@ h2 {
 ** FLIP CARD
 */
 .flip-card-container {
-    font-family: 'Open Sans', sans serif;
-    font-size: 120px;
-    font-weight: bold;
-
+    font-family: oswald ;
+    font-size: 14px;
     width: 400px;
-    height: 250px;
+    height: 300px;
     margin: 10px auto;
-
     border-radius: 10px;
-
     perspective: 1400px;
 }
 
 .flip-card {
     position: relative;
-
     height: 100%;
-
     border-radius: 10px;
-
     width: 100%;
     transform-style: preserve-3d;
+    
+}
+
+.flip-card:hover{
+    cursor: pointer;
 }
 
 .front, .back {
     display: flex;
-
     width: 100%;
     height: 100%;
-
     border-radius: 10px;
-
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
+    padding: 15px;
+}
+
+.good-vote {
+    border: 5px solid #4DAA57;
+}
+
+.bad-vote {
+    border: 5px solid #C1292E;
+}
+
+.did-not-vote {
+    border: 5px solid orange
+}
+
+.good-vote-full {
+    background-color: #4DAA57;
+}
+
+.bad-vote-full {
+    background-color: #C1292E;
 }
 
 .front {
-    color: #fff;
-    background: #2196f3;
+    color: black;
 }
 
 .back {
     position: absolute;
     top: 0;
     left: 0;
-
     transform: rotateY(180deg);
-
-    color: white;
-    background: rgb(202, 90, 90);
+    color: black;
+    background: #DBE0E4;
+    font-size: 13px;
 }
 
 
@@ -160,63 +257,34 @@ h2 {
 
 @keyframes floating1 {
     0% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
     50% {
-      transform: translateY(8%);
+    transform: translateY(8%);
     }
     100% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
 }
 @keyframes floating2 {
     0% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
     50% {
-      transform: translateY(8%);
+    transform: translateY(8%);
     }
     100% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
 }
 @keyframes floating3 {
     0% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
     50% {
-      transform: translateY(8%);
+    transform: translateY(8%);
     }
     100% {
-      transform: translateY(0);
+    transform: translateY(0);
     }
 }
-
-@keyframes fadeInAndOut {
-    0% {
-      opacity: 0;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(-5%);
-    }
-  }
-
-  @keyframes glowing {
-    0% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes vex-rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(359deg);
-    }
-  }

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Vos députés et la pêche</title>
+    <title>Nos eurodéputés protègent-ils les océans ?</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,133 +15,369 @@
 <body>
     <header class="container-fluid mt-1">
         <div class="row">
-            <div class="col-6 col-lg-2">
-                <img class="logo" src="./img/logo-bloom-crop.jpg" alt="logo de bloom"/>
+            <div class="col">
+                <a href="https://www.bloomassociation.org/" target="_blank"><img class="logo" src="./img/logo-bloom-crop.jpg" alt="logo de bloom"/></a>
             </div>
         </div>
     </header>
     <section class="container">
         <div class="row">
-            <div class="col-12 title text-center">
-                <h1>Vos députés protègent-ils les océans ?</h1>
-                <p> Texte explicatif : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ipsa numquam reiciendis, dolorum quos facere voluptatibus repudiandae illo tenetur velit corporis. Dolore magnam tempore aperiam eligendi voluptate perferendis, et odit?</p>
-                <input id="search" type="text" class="form-control" placeholder="Recherchez un député ou parti politique">
+            <div class="col-12 title">
+                <h1>Quels députés pour les océans?</h1>
+                <p class="intro">Face à l'opacité des institutions européennes, BLOOM se mobilise pour que les votes des eurodéputés ne restent pas dans l'ombre. </p>
+                <p class="intro">Découvrez ce que nos eurodéputés ont voté quand ils ont eu l’opportunité de protéger les océans. </p>
+                <p class="intro">Ce classement repose sur les recommandations des ONG, ainsi, nos eurodéputés se voient attribuer une note sur 20 en fonction de la compatibilité de leurs votes avec ces recommandations. Pour en savoir plus sur notre méthode, <a href="calculs-notes.html">cliquez ici.</a></p> 
+                <input id="search" type="text" class="form-control col-12 col-lg-3 d-inline" placeholder="Recherchez un député">
+                <div class="dropdown d-inline">
+                    <button class="btn btn-secondary dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Par Parti
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item btn-partis" id="EELV" href="#">Europe Ecologie Les Verts</a>
+                        <a class="dropdown-item btn-partis" id="LR" href="#">Les Républicains</a>
+                        <a class="dropdown-item btn-partis" id="LREM" href="#">La République en Marche</a>
+                        <a class="dropdown-item btn-partis" id="PS" href="#">Parti Socialiste </a>
+                        <a class="dropdown-item btn-partis" id="RN" href="#">Rassemblement National</a>
+                        <a class="dropdown-item btn-partis" id="FI" href="#"> La France Insoumise</a>
+                        <a class="dropdown-item btn-partis" id="GC" href="#">Génération Citoyens</a>
+                        <a class="dropdown-item btn-partis" id="FL" href="#">Les Français libres</a>
+                        <a class="dropdown-item btn-partis" id="LP" href="#">Les Patriotes</a>
+                        <a class="dropdown-item btn-partis" id="MR" href="#">Mouvement Radical</a>
+                        <a class="dropdown-item btn-partis" id="MD" href="#">Mouvement Démocrate </a>
+                        <a class="dropdown-item btn-partis" id="AG" href="#">Agir</a>
+                        <a class="dropdown-item btn-partis" id="DLF" href="#">Debout la France</a>
+                        <a class="dropdown-item btn-partis" id="LCJ" href="#">Les Comités Jeanne</a>
+                        <a class="dropdown-item btn-partis" id="GS" href="#">Génération.s</a>
+                        <a class="dropdown-item btn-partis" id="ID" href="#">Indépendant</a>
+                        <a class="dropdown-item btn-partis" id="PCF" href="#">Parti Communiste Français</a>
+                        <a class="dropdown-item btn-partis" id="LRDG" href="#">Les Radicaux de Gauche</a>
+                    </div>
+                </div>
+                <div class="dropdown d-inline">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Par Groupe
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item btn-partis" id="ALDE" href="#">Alliance des Démocrates et des Libéraux pour l'Europe (ALDE)</a>
+                        <a class="dropdown-item btn-partis" id="ELDD" href="#">Europe de la Liberté et de la Démocratie Directe (ELDD)</a>
+                        <a class="dropdown-item btn-partis" id="ENL" href="#">Europe des Nations et des Libertés (ENL)</a>
+                        <a class="dropdown-item btn-partis" id="GUE" href="#">Gauche Unitaire Européenne/Gauche Verte Nordique (GUE/NGL)</a>
+                        <a class="dropdown-item btn-partis" id="NI" href="#">Non-Inscrits (NI)</a>
+                        <a class="dropdown-item btn-partis" id="PPE" href="#">Parti Populaire Européen (PPE) </a>
+                        <a class="dropdown-item btn-partis" id="SD" href="#">Alliance Progressiste des Socialistes et Démocrates (S&D)</a>
+                        <a class="dropdown-item btn-partis" id="VALE" href="#">Les Verts/Alliance Libre Européenne (Verts/ALE)</a>
+                    </div>
+                </div>
+                <button class="btn btn-secondary button-reset btn-partis separate-tous" id="all">Tous</button>
+                <button class="btn button-ranking" id='rankdecroissant'>Meilleures Notes</button>
+                <button class="btn button-ranking" id='rankcroissant'>Classement Croissant</button>
+                <button class="btn button-ranking" id='rankAtoZ'>De A à Z</button>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+        </div>
+        <div class="row ranking-group grid" id="parent">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2" data-alphabetical="83">
                 <div class="card">
-                    <img src="./img/crop-marie" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <img src="./img/michele alliot marie 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <p class="stat-medium">60%</p>
+                        <h5 class="card-title">Michèle ALLIOT-MARIE</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">2/20</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <p class="invisible">michele michèle alliot marie</p>
+                        <p class="invisible">michele michèle alliot marie parti populaire europeen PPE LR Les républicains Les republicains</p>
                     </div>
                 </div>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="9" data-alphabetical="82">
                 <div class="card">
-                    <img src="./img/eric.andrieu.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <img src="./img/Eric Andrieu 680x530.jpeg" class="card-img-top" alt="photo de Eric Andireu">
                     <div class="card-body">
-                        <h5 class="card-title">Eric Andrieu</h5>
-                        <p class="card-text">Social et démocrate</p>
-                        <p class="stat-medium">54%</p>
-                        <a href="#" class="btn btn-secondary">détails</a>
-                        <p class="invisible">eric éric andrieu</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/crop-arnautu" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Marie-Christine Arnautu</h5>
-                        <p class="card-text">Les verts</p>
-                        <p class="stat-good">83%</p>
-                        <a href="#" class="btn btn-secondary">voir les votes</a>
-                        <p class="invisible">marie christine arnautu</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/isabell-crop" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Isabelle Thomas</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <p class="stat-bad">17%</p>
+                        <h5 class="card-title">Eric ANDRIEU</h5>
+                        <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
+                        <p class="stat-medium">9/20</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <p class="invisible">isabelle thomas</p>
+                        <p class="invisible">eric éric andrieu S&D PS alliance progressiste des socialistes et démocrates parti socialiste PS</p>
                     </div>
                 </div>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="81">
                 <div class="card">
-                    <img src="./img/alain-cadec.jpeg" class="card-img-top" alt="photo de alain cadec">
+                    <img src="./img/marie christine arnautu 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
-                        <h5 class="card-title">Alain Cadec</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <p class="stat-medium">37%</p>
+                        <h5 class="card-title">Marie-Christine ARNAUTU</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
+                        <p class="stat-bad">5/20</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <p class="invisible">alain cadec</p>
+                        <p class="invisible">marie christine arnautu europe des nations et des libertés rassemblement national FN ENL</p>
                     </div>
                 </div>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LREM ALDE" data-percentage="10" data-alphabetical="80">
                 <div class="card">
-                    <img src="./img/jose.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <img src="./img/Jean arthuis-680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
-                        <h5 class="card-title">José Bové</h5>
-                        <p class="card-text">Les Verts</p>
-                        <p class="stat-good">87%</p>
+                        <h5 class="card-title">Jean ARTHUIS</h5>
+                        <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(La République En Marche)</p>
+                        <p class="stat-medium">10/20</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                        <p class="invisible">jose bove les verts josé bové</p>
+                        <p class="invisible">jean arthuis ALDE alliance des démocrates et des libéraux pour l'europe la republique en marche LREM </p>
                     </div>
                 </div>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center GS SD" data-percentage="9" data-alphabetical="79">
                 <div class="card">
-                    <img src="./img/800px-Younous_Omarjee_2017.jpg" class="card-img-top" alt="photo de Omarjee">
+                    <img src="./img/guillaume balas 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
-                        <h5 class="card-title">Younous Omarjee</h5>
-                        <p class="card-text">Extrême Gauche</p>
-                        <p class="stat-bad">23%</p>
+                        <h5 class="card-title">Guillaume BALAS</h5>
+                        <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Génération.s)</p>
+                        <p class="stat-medium">9/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">guillaume balas S&D alliance progressiste des socialistes et démocrates génération.s generation.s </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="78">
+                <div class="card">
+                    <img src="./img/nicolas bay 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Nicolas BAY</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">nicolas bay ENL groupe europe des nations et des libertes europe des nations et des libertes rassemblement national FN RN </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="7" data-alphabetical="77">
+                <div class="card">
+                    <img src="./img/Pervenche Berès 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Pervenche BÉRÈS</h5>
+                        <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
+                        <p class="stat-bad">7/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">pervenche beres bérès S&D alliance progressiste des socialistes et démocrates parti socialiste PS </p>
+                    </div>
+                </div>
+            </div>   
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center ELDD" data-percentage="6" data-alphabetical="76">
+                <div class="card">
+                    <img src="./img/Question-mark-face 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Joëlle BERGERON</h5>
+                        <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(sans étiquette)</p>
+                        <p class="stat-bad">6/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">joelle joëlle bergeron EFDD ELDD groupe europe de la liberte et de la democratie directe sans étiquette </p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="75">
+                <div class="card">
+                    <img src="./img/Question-mark-face 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Dominique BILDE</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">dominique bilde ENL RN FN groupe europe des nations et des libertés europe des nations et des libertes rassemblement national</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="74">
+                <div class="card">
+                    <img src="./img/Question-mark-face 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Marie-Christine BOUTONNET</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">marie-christine boutonnet marie christine boutonnet ENL RN FN groupe europe des nations et des libertés europe des nations et des libertes rassemblement national </p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="15.5" data-alphabetical="73">
+                <div class="card">
+                    <img src="./img/josé bové 680x530.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">José BOVÉ</h5>
+                        <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Écologie Les Verts)</p>
+                        <p class="stat-good">15/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">jose bove les verts josé bové EELV les verts/ALE</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="72">
+                <div class="card">
+                    <img src="./img/Steeve Briois 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Steeve BRIOIS</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">steeve briois ENL RN FN groupe europe des nations et des libertés europe des nations et des libertes rassemblement national </p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="3" data-alphabetical="71">
+                <div class="card">
+                    <img src="./img/alain cadec 680x530.jpeg" class="card-img-top" alt="photo de alain cadec">
+                    <div class="card-body">
+                        <h5 class="card-title">Alain CADEC</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">3/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">alain cadec PPE parti populaire européen les républicains les republicains LR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center GC ALDE" data-percentage="10.5" data-alphabetical="70">
+                <div class="card">
+                    <img src="./img/Jean-Marie Cavada 680x530.jpeg" class="card-img-top" alt="photo de Eric Andireu">
+                    <div class="card-body">
+                        <h5 class="card-title">Jean-Marie CAVADA</h5>
+                        <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe </br>(Génération Citoyens)</p>
+                        <p class="stat-medium">11/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">jean marie jean-marie cavada ALDE alliance des démocrates et des libéraux pour l'europe generation citoyens</p>
+                    </div>
+                </div>
+            </div>         
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center FL ELDD" data-percentage="5" data-alphabetical="69">
+                <div class="card">
+                    <img src="./img/Aymeric Chauprade 680x530-2.jpeg" class="card-img-top" alt="photo de Eric Andireu">
+                    <div class="card-body">
+                        <h5 class="card-title">Aymeric CHAUPRADE</h5>
+                        <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe </br>(Les Français Libre)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">aymeric chauprade EFDD ELDD groupe europe de la liberté et de la démocratie directe europe de la liberté et de la démocratie directe les français libre </p>
+                    </div>
+                </div>
+            </div>         
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="3" data-alphabetical="68">
+                <div class="card">
+                    <img src="./img/Question-mark-face 680x530.jpeg" class="card-img-top" alt="photo de Eric Andireu">
+                    <div class="card-body">
+                        <h5 class="card-title">Jacques COLOMBIER</h5>
+                        <p class="card-text">Groupe Europe des Nations et des Libertés </br>(Rassemblement National)</p>
+                        <p class="stat-bad">3/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">jacques colombier ENL RN FN groupe europe des nations et des libertés europe des nations et des libertés rassemblement national </p>
+                    </div>
+                </div>
+            </div>         
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center MR ALDE" data-percentage="9"data-alphabetical="67">
+                <div class="card">
+                    <img src="./img/Thierry_Cornillet 680x530.jpeg" class="card-img-top" alt="photo de Eric Andireu">
+                    <div class="card-body">
+                        <h5 class="card-title">Thierry CORNILLET</h5>
+                        <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe </br>(Mouvement Radical)</p>
+                        <p class="stat-medium">9/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">thierry cornillet ALDE alliance des democrates et des liberaux pour l'europe mouvement radical</p>
+                    </div>
+                </div>
+            </div>         
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LP ELDD" data-percentage="5"data-alphabetical="66">
+                <div class="card">
+                    <img src="./img/Question-mark-face 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Mireille D'ORNANO</h5>
+                        <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Les Patriotes)</p>
+                        <p class="stat-bad">5/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">mireille d'ornano groupe europe de la liberté et de la démocratie directe les patriotes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2" data-alphabetical="65">
+                <div class="card">
+                    <img src="./img/Danjean,_Arnaud 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Arnaud DANJEAN</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">2/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">arnaud danjean parti populaire europeen PPE Les républicains Les republicains LR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2" data-alphabetical="64">
+                <div class="card">
+                    <img src="./img/Michel Dantin 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Michel DANTIN</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">2/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">michel dantin parti populaire europeen PPE Les républicains Les republicains LR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2" data-alphabetical="63">
+                <div class="card">
+                    <img src="./img/rachida dati 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Rachida DATI</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">2/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">rachida dati parti populaire europeen PPE Les républicains Les republicains LR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="3" data-alphabetical="62">
+                <div class="card">
+                    <img src="./img/Renaud Muselier 680x530.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <div class="card-body">
+                        <h5 class="card-title">Renaud MUSELIER</h5>
+                        <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
+                        <p class="stat-bad">3/20</p>
+                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">renaud muselier parti populaire europeen PPE Les républicains Les republicains LR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center FI GUE" data-percentage="14" data-alphabetical="61">
+                <div class="card">
+                    <img src="./img/Younous Omarjee 680x530.jpeg" class="card-img-top" alt="photo de Omarjee">
+                    <div class="card-body">
+                        <h5 class="card-title">Younous OMARJEE</h5>
+                        <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(La France Insoumise)</p>
+                        <p class="stat-good">14/20</p>
                         <a href="omarjee.html" class="btn btn-secondary">ses votes</a>
-                        <p class="invisible">younous omarjee extreme extrême gauche</p>
+                        <p class="invisible">younous omarjee gauche unitaire europeenne france insoumise GUE FI GUE/NGL</p>
                     </div>
                 </div>
             </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
+            <div class="card-container col-12 col-md-6 col-lg-3 text-center GS SD" data-percentage="9" data-alphabetical="60">
                 <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <img src="./img/isabelle thomas 680x530.jpeg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <p class="stat-bad">33%</p>
+                        <h5 class="card-title">Isabelle THOMAS</h5>
+                        <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Génération.s)</p>
+                        <p class="stat-medium">9/20</p>
                         <a href="#" class="btn btn-secondary">ses votes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container col-12 col-md-6 col-lg-3 text-center">
-                <div class="card">
-                    <img src="./img/Michele-Alliot-Marie.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
-                    <div class="card-body">
-                        <h5 class="card-title">Michèle Alliot-Marie</h5>
-                        <p class="card-text">Parti populaire Européen</p>
-                        <p class="stat-medium">43%</p>
-                        <a href="#" class="btn btn-secondary">ses votes</a>
+                        <p class="invisible">isabelle thomas S&D alliance progressiste des socialistes et démocrates generation.s génération.s</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="container-fluid mb-4">
+    <footer class="container my-4">
         <div class="row">
-            <div class="col-8 col-lg-4 offset-lg-5">
-                <img class="img-float2" src="./img/tortue.jpg" alt="logo de tortue"/>
-                <img class="img-float1" src="./img/cropped fish" alt="logo de poisson"/>
+            <div class="col-12 text-center">
+                <img class="img-float1" src="./img/tortue.jpg" alt="logo de tortue"/>
+                <img class="img-float2" src="./img/cropped fish" alt="logo de poisson"/>
                 <img class="img-float3" src="./img/octopus.png" alt="logo de pieuvre"/>
+                <a href="https://www.bloomassociation.org/" target="_blank"></br>En savoir plus sur Bloom</a>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <p class="signature">Codé par Vianney Guesdon-Vennerie ©</p>
+            </div>   
         </div>
     </footer>
 
