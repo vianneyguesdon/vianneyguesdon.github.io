@@ -10,25 +10,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">   
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">    
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 </head>
 
 <body>
-    <header class="container-fluid mt-1">
-        <div class="row">
-            <div class="col">
-                <a href="https://www.bloomassociation.org/" target="_blank"><img class="logo" src="./img/logo-bloom-crop.jpg" alt="logo de bloom"/></a>
-            </div>
-        </div>
-    </header>
-    <section class="container">
-        <div class="row">
-            <div class="col-12 title">
-                <h1>Un outil pour évaluer les votes de nos eurodéputés</h1>
-                <p class="intro">Face à l'opacité des institutions européennes, BLOOM se mobilise pour que les votes des eurodéputés ne restent pas dans l'ombre. </p>
-                <p class="intro">Les textes les plus importants adoptés, en matière de protection de l'océan, pendant la dernière législature (de Juillet 2014 à Avril 2019) ont été selectionnés par l'équipe de BLOOM. Dans ces textes, des amendements ont été choisis en croisant deux critères : ceux dont le détail des votes était disponible et ceux sur lesquels les ONG ont communiqué aux députés leurs recommandations, accumulant alors le double avantage de la publicité et de l'importance.</p>
-                <p class="intro">Au sein de cette sélection, 3 points ont été attribués aux votes protecteurs de l'océan et 0 aux votes destructeurs de l'océan. Une moyenne a ensuite été réalisé et a permis d'attribuer une note à chaque député. Ainsi, si un député a 20/20 cela signifie que tous ces votes ont été protecteur de l'océan. Á l'inverse, si un député a 0/20 cela signifie que tous ses votes ont été destructeur de l'océan. Pour en savoir plus sur la méthode, <a href="calculs-notes.html">cliquez ici.</a></p> 
-                <p class="intro">Découvrez le classement de nos eurodéputés.</p>
-                <input id="search" type="text" class="form-control col-12 col-lg-3 d-inline" placeholder="Recherchez un député">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="https://www.bloomassociation.org/" target="_blank"><img class="logo" src="./img/bloom-detoure.png" alt="logo de bloom"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+
+            <input id="search" type="text" class="form-control col-12 col-lg-3 d-inline form-control mr-sm-2" placeholder="Recherchez un député">
+            
+            <div class="py-1">
                 <div class="dropdown d-inline">
                     <button class="btn btn-secondary dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Par Parti
@@ -56,6 +53,8 @@
                         <a class="dropdown-item btn-partis" id="UDI" href="#">Union des Démocrates Indépendants</a>
                     </div>
                 </div>
+                <!-- ./ fin dropdownparti-->
+
                 <div class="dropdown d-inline">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Par Groupe
@@ -71,16 +70,49 @@
                         <a class="dropdown-item btn-partis" id="VALE" href="#">Les Verts/Alliance Libre Européenne (Verts/ALE)</a>
                     </div>
                 </div>
+                <!-- ./ fin dropdowngroupe-->
                 <button class="btn btn-secondary button-reset btn-partis separate-tous" id="all">Tous</button>
+            </div>
+
+            <div>
                 <button class="btn button-ranking" id='rankdecroissant'>Meilleures Notes</button>
                 <button class="btn button-ranking" id='rankcroissant'>Pires Notes</button>
                 <button class="btn button-ranking" id='rankAtoZ'>De A à Z</button>
+            </div>
+
+           
+        </div>
+    </nav>
+    <!-- ./end NAVBAR -->
+
+    <a id="button-backToTop"></a>
+    <!-- ./end back to top button-->
+
+    <header class="container-fluid mt-1">
+        
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="col-12 title">
+                <h1>Un outil pour évaluer les votes de nos eurodéputés</h1>
+
+                <div id="summary">
+                    <p class="collapse intro" id="collapseSummary">
+                        Face à l'opacité des institutions européennes, BLOOM se mobilise pour que les votes des eurodéputés ne restent pas dans l'ombre.
+                        </br>Les textes les plus importants adoptés, en matière de protection de l'océan, pendant la dernière législature (de Juillet 2014 à Avril 2019) ont été selectionnés par l'équipe de BLOOM. 
+                        </br>Dans ces textes, des amendements ont été choisis en croisant deux critères : ceux dont le détail des votes était disponible et ceux sur lesquels les ONG ont communiqué aux députés leurs recommandations, accumulant alors le double avantage de la publicité et de l'importance.
+                        </br>Au sein de cette sélection, 3 points ont été attribués aux votes protecteurs de l'océan et 0 aux votes destructeurs de l'océan. Une moyenne a ensuite été réalisée et a permis d'attribuer une note à chaque député. Pour en savoir plus sur la méthode <a href="calculs-notes.html">cliquez ici.</a>
+                        </br>Découvrez ci-dessous le classement de nos eurodéputés.
+                    </p>
+                    <a class="collapsed end" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+                </div>
+
             </div>
         </div>
         <div class="row ranking-group grid" id="parent">
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="4.44" data-alphabetical="82">
                 <div class="card inactif">
-                    <img src="./img/Louis Aliot 680x530_opt.jpg" class="card-img-top" alt="photo de Louis Aliot">
+                    <img src="./img/1.jpg" class="card-img-top" alt="photo de Louis Aliot">
                     <div class="card-body">
                         <h5 class="card-title">Louis ALIOT</h5>
                         <h6>INACTIF : fin de mandat : Juillet 2017</h6>
@@ -93,7 +125,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="81">
                 <div class="card">
-                    <img src="./img/michele alliot marie 680x530_opt.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
+                    <img src="./img/2.jpg" class="card-img-top" alt="photo de Michèle Alliot-Marie">
                     <div class="card-body">
                         <h5 class="card-title">Michèle ALLIOT-MARIE</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -105,7 +137,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="9.44" data-alphabetical="80">
                 <div class="card">
-                    <img src="./img/Eric Andrieu 680x530_opt.jpg" class="card-img-top" alt="photo de Eric Andireu">
+                    <img src="./img/3.jpg" class="card-img-top" alt="photo de Eric Andireu">
                     <div class="card-body">
                         <h5 class="card-title">Eric ANDRIEU</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -117,7 +149,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="4.86" data-alphabetical="79">
                 <div class="card">
-                    <img src="./img/marie christine arnautu 680x530_opt.jpg" class="card-img-top" alt="photo de Marie-Christine Arnautu">
+                    <img src="./img/4.jpg" class="card-img-top" alt="photo de Marie-Christine Arnautu">
                     <div class="card-body">
                         <h5 class="card-title">Marie-Christine ARNAUTU</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -129,7 +161,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LREM ALDE" data-percentage="9.72" data-alphabetical="78">
                 <div class="card">
-                    <img src="./img/Jean arthuis-680x530_opt.jpg" class="card-img-top" alt="photo de Jean Arthuis">
+                    <img src="./img/5.jpg" class="card-img-top" alt="photo de Jean Arthuis">
                     <div class="card-body">
                         <h5 class="card-title">Jean ARTHUIS</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(La République En Marche)</p>
@@ -141,7 +173,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center GS SD" data-percentage="9.16" data-alphabetical="77">
                 <div class="card">
-                    <img src="./img/guillaume balas 680x530_opt.jpg" class="card-img-top" alt="photo de Guillaume Balas">
+                    <img src="./img/6.jpg" class="card-img-top" alt="photo de Guillaume Balas">
                     <div class="card-body">
                         <h5 class="card-title">Guillaume BALAS</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Génération.s)</p>
@@ -153,7 +185,7 @@
             </div>            
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.27" data-alphabetical="76">
                 <div class="card">
-                    <img src="./img/nicolas bay 680x530_opt.jpg" class="card-img-top" alt="photo de Nicolas Bay ">
+                    <img src="./img/7.jpg" class="card-img-top" alt="photo de Nicolas Bay ">
                     <div class="card-body">
                         <h5 class="card-title">Nicolas BAY</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -165,7 +197,7 @@
             </div>            
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="6.66" data-alphabetical="75">
                 <div class="card">
-                    <img src="./img/Pervenche Berès 680x530_opt.jpg" class="card-img-top" alt="photo de Pervenche Bérès">
+                    <img src="./img/8.jpg" class="card-img-top" alt="photo de Pervenche Bérès">
                     <div class="card-body">
                         <h5 class="card-title">Pervenche BÉRÈS</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -177,7 +209,7 @@
             </div>   
             <div class="card-container col-12 col-md-6 col-lg-3 text-center SE ELDD" data-percentage="6.94" data-alphabetical="74">
                 <div class="card">
-                    <img src="./img/joelle bergeron 680x530_opt.jpg" class="card-img-top" alt="photo de Joelle bergeron">
+                    <img src="./img/9.jpg" class="card-img-top" alt="photo de Joelle bergeron">
                     <div class="card-body">
                         <h5 class="card-title">Joëlle BERGERON</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Sans Étiquette)</p>
@@ -189,7 +221,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.41" data-alphabetical="73">
                 <div class="card">
-                    <img src="./img/Dominique Bilde 680x530_opt.jpg" class="card-img-top" alt="photo de Dominique Bilde">
+                    <img src="./img/10.jpg" class="card-img-top" alt="photo de Dominique Bilde">
                     <div class="card-body">
                         <h5 class="card-title">Dominique BILDE</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -201,7 +233,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.27" data-alphabetical="72">
                 <div class="card">
-                    <img src="./img/marie christine boutonnet 680x530_opt.jpg" class="card-img-top" alt="photo de Marie-Christine Boutonnet">
+                    <img src="./img/11.jpg" class="card-img-top" alt="photo de Marie-Christine Boutonnet">
                     <div class="card-body">
                         <h5 class="card-title">Marie-Christine BOUTONNET</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -213,7 +245,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="15.69" data-alphabetical="71">
                 <div class="card">
-                    <img src="./img/josé bové 680x530_opt.jpg" class="card-img-top" alt="photo de José Bové">
+                    <img src="./img/12.jpg" class="card-img-top" alt="photo de José Bové">
                     <div class="card-body">
                         <h5 class="card-title">José BOVÉ</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Écologie Les Verts)</p>
@@ -225,7 +257,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.41" data-alphabetical="70">
                 <div class="card">
-                    <img src="./img/Steeve Briois 680x530_opt.jpg" class="card-img-top" alt="photo de Steeve Briois">
+                    <img src="./img/13.jpg" class="card-img-top" alt="photo de Steeve Briois">
                     <div class="card-body">
                         <h5 class="card-title">Steeve BRIOIS</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -237,7 +269,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="3.75" data-alphabetical="69">
                 <div class="card">
-                    <img src="./img/alain cadec 680x530_opt.jpg" class="card-img-top" alt="photo de alain cadec">
+                    <img src="./img/14.jpg" class="card-img-top" alt="photo de alain cadec">
                     <div class="card-body">
                         <h5 class="card-title">Alain CADEC</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -249,7 +281,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center GC ALDE" data-percentage="10.13" data-alphabetical="68">
                 <div class="card">
-                    <img src="./img/Jean-Marie Cavada 680x530_opt.jpg" class="card-img-top" alt="photo de Jean-Marie Cavada">
+                    <img src="./img/15.jpg" class="card-img-top" alt="photo de Jean-Marie Cavada">
                     <div class="card-body">
                         <h5 class="card-title">Jean-Marie CAVADA</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe </br>(Génération Citoyens)</p>
@@ -261,7 +293,7 @@
             </div>         
             <div class="card-container col-12 col-md-6 col-lg-3 text-center FL ELDD" data-percentage="4.44" data-alphabetical="67">
                 <div class="card">
-                    <img src="./img/Aymeric Chauprade 680x530-2_opt.jpg" class="card-img-top" alt="photo de Aymeric Chauprade">
+                    <img src="./img/16.jpg" class="card-img-top" alt="photo de Aymeric Chauprade">
                     <div class="card-body">
                         <h5 class="card-title">Aymeric CHAUPRADE</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe </br>(Les Français Libres)</p>
@@ -273,7 +305,7 @@
             </div>         
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="4.04" data-alphabetical="66">
                 <div class="card">
-                    <img src="./img/Jacques Colombier 680x530_opt.jpg" class="card-img-top" alt="photo de Jacques Colombier">
+                    <img src="./img/17.jpg" class="card-img-top" alt="photo de Jacques Colombier">
                     <div class="card-body">
                         <h5 class="card-title">Jacques COLOMBIER</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés </br>(Rassemblement National)</p>
@@ -285,7 +317,7 @@
             </div>         
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MR ALDE" data-percentage="8.73"data-alphabetical="65">
                 <div class="card">
-                    <img src="./img/Thierry_Cornillet 680x530_opt.jpg" class="card-img-top" alt="photo de Thierry Cornillet">
+                    <img src="./img/18.jpg" class="card-img-top" alt="photo de Thierry Cornillet">
                     <div class="card-body">
                         <h5 class="card-title">Thierry CORNILLET</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe </br>(Mouvement Radical)</p>
@@ -297,7 +329,7 @@
             </div>         
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LP ELDD" data-percentage="5.27"data-alphabetical="64">
                 <div class="card">
-                    <img src="./img/Mireille D'Ornano 680x530_opt.jpg" class="card-img-top" alt="photo de Mireille D'Ornano">
+                    <img src="./img/19.jpg" class="card-img-top" alt="photo de Mireille D'Ornano">
                     <div class="card-body">
                         <h5 class="card-title">Mireille D'ORNANO</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Les Patriotes)</p>
@@ -309,7 +341,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.94" data-alphabetical="63">
                 <div class="card">
-                    <img src="./img/Danjean,_Arnaud 680x530_opt.jpg" class="card-img-top" alt="photo de Michèle Arnaud Danjean">
+                    <img src="./img/20.jpg" class="card-img-top" alt="photo de Michèle Arnaud Danjean">
                     <div class="card-body">
                         <h5 class="card-title">Arnaud DANJEAN</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -321,7 +353,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="62">
                 <div class="card">
-                    <img src="./img/Michel Dantin 680x530_opt.jpg" class="card-img-top" alt="photo de Michel Dantin">
+                    <img src="./img/21.jpg" class="card-img-top" alt="photo de Michel Dantin">
                     <div class="card-body">
                         <h5 class="card-title">Michel DANTIN</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -333,7 +365,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.08" data-alphabetical="61">
                 <div class="card">
-                    <img src="./img/rachida dati 680x530_opt.jpg" class="card-img-top" alt="photo de Rachida Dati">
+                    <img src="./img/22.jpg" class="card-img-top" alt="photo de Rachida Dati">
                     <div class="card-body">
                         <h5 class="card-title">Rachida DATI</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -345,7 +377,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MD ALDE" data-percentage="8.88" data-alphabetical="60">
                 <div class="card inactif">
-                    <img src="./img/Marielle de Sarnez 680x530_opt.jpg" class="card-img-top" alt="photo de Marielle de Sarnez">
+                    <img src="./img/23.jpg" class="card-img-top" alt="photo de Marielle de Sarnez">
                     <div class="card-body">
                         <h5 class="card-title">Marielle DE SARNEZ</h5>
                         <h6>INACTIVE : fin de mandat : Mai 2017</h6>
@@ -358,7 +390,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="59">
                 <div class="card">
-                    <img src="./img/Angélique Delahaye 680x530_opt.jpg" class="card-img-top" alt="photo de Rachida Dati">
+                    <img src="./img/24.jpg" class="card-img-top" alt="photo de Angelique delahaye">
                     <div class="card-body">
                         <h5 class="card-title">Angélique DELAHAYE</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -370,7 +402,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="19.44" data-alphabetical="58">
                 <div class="card">
-                    <img src="./img/Karima Delli 680x530_opt.jpg" class="card-img-top" alt="photo de Rachida Dati">
+                    <img src="./img/25.jpg" class="card-img-top" alt="photo de Rachida Dati">
                     <div class="card-body">
                         <h5 class="card-title">Karima DELLI</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Ecologie Les Verts)</p>
@@ -382,7 +414,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="7.87" data-alphabetical="57">
                 <div class="card inactif">
-                    <img src="./img/Jean-Paul Denanot 680x530_opt.jpg" class="card-img-top" alt="photo de jean-paul denanot">
+                    <img src="./img/26.jpg" class="card-img-top" alt="photo de jean-paul denanot">
                     <div class="card-body">
                         <h5 class="card-title">Jean-Paul DENANOT</h5>
                         <h6>INACTIF : fin de mandat : Juin 2018</h6>
@@ -395,7 +427,7 @@
             </div>  
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.85" data-alphabetical="56">
                 <div class="card">
-                    <img src="./img/Geoffroy Didier 680x530_opt.jpg" class="card-img-top" alt="photo geoffroy Didier">
+                    <img src="./img/27.jpg" class="card-img-top" alt="photo geoffroy Didier">
                     <div class="card-body">
                         <h5 class="card-title">Geoffroy DIDIER</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -407,7 +439,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="18.61" data-alphabetical="55">
                 <div class="card">
-                    <img src="./img/Pascal Durand 680x530_opt.jpg" class="card-img-top" alt="photo de Pascal Durand">
+                    <img src="./img/28.jpg" class="card-img-top" alt="photo de Pascal Durand">
                     <div class="card-body">
                         <h5 class="card-title">Pascal DURAND</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Ecologie Les Verts)</p>
@@ -419,7 +451,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.33" data-alphabetical="54">
                 <div class="card inactif">
-                    <img src="./img/Edouard Ferrand 680x530_opt.jpg" class="card-img-top" alt="Edouard Ferrand">
+                    <img src="./img/29.jpg" class="card-img-top" alt="Edouard Ferrand">
                     <div class="card-body">
                         <h5 class="card-title">Edouard FERRAND</h5>
                         <h6>INACTIF : fin de mandat : Fév. 2018</h6>
@@ -432,7 +464,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="9.48" data-alphabetical="53">
                 <div class="card">
-                    <img src="./img/Karine Gloanec Maurin 680x530_opt.jpg" class="card-img-top" alt="photo de karine gloanec maurin">
+                    <img src="./img/30.jpg" class="card-img-top" alt="photo de karine gloanec maurin">
                     <div class="card-body">
                         <h5 class="card-title">Karine GLOANEC MAURIN</h5>
                         <p class="card-text">Alliance progressiste des Socialistes et des Démocrates</br>(Parti Socialiste)</p>
@@ -444,7 +476,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center DLF ELDD" data-percentage="5.13" data-alphabetical="52">
                 <div class="card">
-                    <img src="./img/sylvie goddyn 680x530_opt.jpg" class="card-img-top" alt="photo de syvie goddyn">
+                    <img src="./img/31.jpg" class="card-img-top" alt="photo de syvie goddyn">
                     <div class="card-body">
                         <h5 class="card-title">Sylvie GODDYN</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Debout La France)</p>
@@ -456,7 +488,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN NI" data-percentage="6.25" data-alphabetical="51">
                 <div class="card">
-                    <img src="./img/Bruno Gollnish 680x530_opt.jpg" class="card-img-top" alt="photo de bruno gollnisch">
+                    <img src="./img/32.jpg" class="card-img-top" alt="photo de bruno gollnisch">
                     <div class="card-body">
                         <h5 class="card-title">Bruno GOLLNISCH</h5>
                         <p class="card-text">Non-Inscrits</br></br>(Rassemblement National)</p>
@@ -468,7 +500,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MD ALDE" data-percentage="8.88" data-alphabetical="50">
                 <div class="card inactif">
-                    <img src="./img/Sylvie Goulard 680x530_opt.jpg" class="card-img-top" alt="photo de Sylvie Goulard">
+                    <img src="./img/33.jpg" class="card-img-top" alt="photo de Sylvie Goulard">
                     <div class="card-body">
                         <h5 class="card-title">Sylvie GOULARD</h5>
                         <h6>INACTIVE : fin de mandat : Mai 2017</h6>
@@ -481,7 +513,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MD ALDE" data-percentage="10.13" data-alphabetical="49">
                 <div class="card">
-                    <img src="./img/Nathalie Griesbeck 680x530_opt.jpg" class="card-img-top" alt="photo de nathalie griesbeck">
+                    <img src="./img/34.jpg" class="card-img-top" alt="photo de nathalie griesbeck">
                     <div class="card-body">
                         <h5 class="card-title">Nathalie GRIESBECK</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(MoDem)</p>
@@ -493,7 +525,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="48">
                 <div class="card">
-                    <img src="./img/Françoise Grossetête 680x530_opt.jpg" class="card-img-top" alt="photo de francoise grossetete">
+                    <img src="./img/35.jpg" class="card-img-top" alt="photo de francoise grossetete">
                     <div class="card-body">
                         <h5 class="card-title">Françoise GROSSETÊTE</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -505,7 +537,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="8.47" data-alphabetical="47">
                 <div class="card">
-                    <img src="./img/Sylvie Guillaume 680x530_opt.jpg" class="card-img-top" alt="photo de sylvie guillaume">
+                    <img src="./img/36.jpg" class="card-img-top" alt="photo de sylvie guillaume">
                     <div class="card-body">
                         <h5 class="card-title">Sylvie GUILLAUME</h5>
                         <p class="card-text">Alliance progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -517,7 +549,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.36" data-alphabetical="46">
                 <div class="card">
-                    <img src="./img/Brice Hortefeux 680x530_opt.jpg" class="card-img-top" alt="photo de brice hortefeux">
+                    <img src="./img/37.jpg" class="card-img-top" alt="photo de brice hortefeux">
                     <div class="card-body">
                         <h5 class="card-title">Brice HORTEFEUX</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -529,7 +561,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="18.05" data-alphabetical="45">
                 <div class="card">
-                    <img src="./img/Yannick Jadot 680x530_opt.jpg" class="card-img-top" alt="photo de yannick jadot">
+                    <img src="./img/38.jpg" class="card-img-top" alt="photo de yannick jadot">
                     <div class="card-body">
                         <h5 class="card-title">Yannick JADOT</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Écologie Les Verts)</p>
@@ -541,7 +573,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="6.11" data-alphabetical="44">
                 <div class="card">
-                    <img src="./img/Jean-François Jalkh 680x530_opt.jpg" class="card-img-top" alt="photo de jean-francois jalkh">
+                    <img src="./img/39.jpg" class="card-img-top" alt="photo de jean-francois jalkh">
                     <div class="card-body">
                         <h5 class="card-title">Jean-François JALKH</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -553,7 +585,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="6.03" data-alphabetical="43">
                 <div class="card">
-                    <img src="./img/France Jamet 680x530_opt.jpg" class="card-img-top" alt="photo de france jamet">
+                    <img src="./img/40.jpg" class="card-img-top" alt="photo de france jamet">
                     <div class="card-body">
                         <h5 class="card-title">France JAMET</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -565,7 +597,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="14.58" data-alphabetical="42">
                 <div class="card">
-                    <img src="./img/Eva Joly 680x530_opt.jpg" class="card-img-top" alt="photo de eva joly">
+                    <img src="./img/41.jpg" class="card-img-top" alt="photo de eva joly">
                     <div class="card-body">
                         <h5 class="card-title">Eva JOLY</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Écologie Les Verts)</p>
@@ -577,7 +609,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.77" data-alphabetical="41">
                 <div class="card">
-                    <img src="./img/Marc Joulaud 680x530_opt.jpg" class="card-img-top" alt="photo de marc joulaud">
+                    <img src="./img/42.jpg" class="card-img-top" alt="photo de marc joulaud">
                     <div class="card-body">
                         <h5 class="card-title">Marc JOULAUD</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -589,7 +621,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.63" data-alphabetical="40">
                 <div class="card">
-                    <img src="./img/Philippe_Juvin 680x530_opt.jpg" class="card-img-top" alt="photo de philippe juvin">
+                    <img src="./img/43.jpg" class="card-img-top" alt="photo de philippe juvin">
                     <div class="card-body">
                         <h5 class="card-title">Philippe JUVIN</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -601,7 +633,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center UDI ALDE" data-percentage="8.09" data-alphabetical="39">
                 <div class="card">
-                    <img src="./img/Patricia Lalonde 680x530_opt.jpg" class="card-img-top" alt="photo de patricia lalonde">
+                    <img src="./img/44.jpg" class="card-img-top" alt="photo de patricia lalonde">
                     <div class="card-body">
                         <h5 class="card-title">Patricia LALONDE</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(UDI)</p>
@@ -613,7 +645,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center ID PPE" data-percentage="1.66" data-alphabetical="38">
                 <div class="card">
-                    <img src="./img/Alain Lamassoure 680x530_opt.jpg" class="card-img-top" alt="photo de alain lamassoure">
+                    <img src="./img/45.jpg" class="card-img-top" alt="photo de alain lamassoure">
                     <div class="card-body">
                         <h5 class="card-title">Alain LAMASSOURE</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Indépendant)</p>
@@ -625,7 +657,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center ID PPE" data-percentage="1.66" data-alphabetical="37">
                 <div class="card">
-                    <img src="./img/Jérôme Lavrilleux 680x530_opt.jpg" class="card-img-top" alt="photo de jerome lavrilleux">
+                    <img src="./img/46.jpg" class="card-img-top" alt="photo de jerome lavrilleux">
                     <div class="card-body">
                         <h5 class="card-title">Jérôme LAVRILLEUX</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Indépendant)</p>
@@ -637,7 +669,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="36">
                 <div class="card inactif">
-                    <img src="./img/Constance Le Grip 680x530_opt.jpg" class="card-img-top" alt="photo de constance le grip">
+                    <img src="./img/47.jpg" class="card-img-top" alt="photo de constance le grip">
                     <div class="card-body">
                         <h5 class="card-title">Constance LE GRIP</h5>
                         <h6>INACTIVE : fin de mandat : Nov. 2017</h6>
@@ -650,7 +682,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PCF GUE" data-percentage="10.55" data-alphabetical="35">
                 <div class="card">
-                    <img src="./img/Patrick Le Hyaric 680x530_opt.jpg" class="card-img-top" alt="photo de patrick le hyaric">
+                    <img src="./img/48.jpg" class="card-img-top" alt="photo de patrick le hyaric">
                     <div class="card-body">
                         <h5 class="card-title">Patrick LE HYARIC</h5>
                         <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(Parti Communiste Français)</p>
@@ -662,7 +694,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LCJ NI" data-percentage="3.05" data-alphabetical="34">
                 <div class="card">
-                    <img src="./img/JM_le_Pen 680x530_opt.jpg" class="card-img-top" alt="photo de jean-marie Le Pen">
+                    <img src="./img/49.jpg" class="card-img-top" alt="photo de jean-marie Le Pen">
                     <div class="card-body">
                         <h5 class="card-title">Jean-Marie LE PEN</h5>
                         <p class="card-text">Non-Inscrits</br></br>(Les Comités Jeanne)</p>
@@ -674,7 +706,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="4.44" data-alphabetical="33">
                 <div class="card inactif">
-                    <img src="./img/Marine Le Pen 680x530_opt.jpg" class="card-img-top" alt="photo de Marine Le Pen">
+                    <img src="./img/50.jpg" class="card-img-top" alt="photo de Marine Le Pen">
                     <div class="card-body">
                         <h5 class="card-title">Marine LE PEN</h5>
                         <h6>INACTIVE : fin de mandat : Juin 2017</h6>
@@ -687,7 +719,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="4.30" data-alphabetical="32">
                 <div class="card">
-                    <img src="./img/Gilles Lebreton 680x530_opt.jpg" class="card-img-top" alt="photo de gilles lebreton">
+                    <img src="./img/51.jpg" class="card-img-top" alt="photo de gilles lebreton">
                     <div class="card-body">
                         <h5 class="card-title">Gilles LEBRETON</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -699,7 +731,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.39" data-alphabetical="31">
                 <div class="card">
-                    <img src="./img/christelle_lechevalier_dr 680x530_opt.jpg" class="card-img-top" alt="photo de christelle lechevalier">
+                    <img src="./img/52.jpg" class="card-img-top" alt="photo de christelle lechevalier">
                     <div class="card-body">
                         <h5 class="card-title">Christelle LECHEVALIER</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -711,7 +743,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="30">
                 <div class="card">
-                    <img src="./img/phillipe loiseau 680x530_opt.jpg" class="card-img-top" alt="photo de philippe loiseau">
+                    <img src="./img/53.jpg" class="card-img-top" alt="photo de philippe loiseau">
                     <div class="card-body">
                         <h5 class="card-title">Philippe LOISEAU</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -723,7 +755,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="8.88" data-alphabetical="29">
                 <div class="card">
-                    <img src="./img/LJM 680x530_opt.jpg" class="card-img-top" alt="photo de louis-jospeh manscour">
+                    <img src="./img/54.jpg" class="card-img-top" alt="photo de louis-jospeh manscour">
                     <div class="card-body">
                         <h5 class="card-title">Louis-Joseph MANSCOUR</h5>
                         <p class="card-text">Alliance progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -735,7 +767,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="28">
                 <div class="card">
-                    <img src="./img/Dominique Martin (mauvaise qualite) 680x530_opt.jpg" class="card-img-top" alt="photo de dominique martin">
+                    <img src="./img/55.jpg" class="card-img-top" alt="photo de dominique martin">
                     <div class="card-body">
                         <h5 class="card-title">Dominique MARTIN</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -747,7 +779,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="10" data-alphabetical="27">
                 <div class="card">
-                    <img src="./img/Edouard Martin 680x530_opt.jpg" class="card-img-top" alt="photo de edouard martin">
+                    <img src="./img/56.jpg" class="card-img-top" alt="photo de edouard martin">
                     <div class="card-body">
                         <h5 class="card-title">Edouard MARTIN</h5>
                         <p class="card-text">Alliance progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -759,7 +791,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center FI GUE" data-percentage="10.27" data-alphabetical="26">
                 <div class="card">
-                    <img src="./img/Emmanuel Maurel 680x530_opt.jpg" class="card-img-top" alt="photo de emmanuel maurel">
+                    <img src="./img/57.jpg" class="card-img-top" alt="photo de emmanuel maurel">
                     <div class="card-body">
                         <h5 class="card-title">Emmanuel MAUREL</h5>
                         <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(La France Insoumise)</p>
@@ -771,7 +803,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center FI GUE" data-percentage="8.88" data-alphabetical="25">
                 <div class="card">
-                    <img src="./img/Jean Luc Mélenchon 680x530_opt.jpg" class="card-img-top" alt="photo de jean luc mélenchon">
+                    <img src="./img/58.jpg" class="card-img-top" alt="photo de jean luc mélenchon">
                     <div class="card-body inactif">
                         <h5 class="card-title">Jean-Luc MÉLENCHON</h5>
                         <h6>INACTIF : fin de mandat : Juin 2017</h6>
@@ -784,7 +816,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5.27" data-alphabetical="24">
                 <div class="card">
-                    <img src="./img/Joelle melin 680x530_opt.jpg" class="card-img-top" alt="photo de joelle melin">
+                    <img src="./img/59.jpg" class="card-img-top" alt="photo de joelle melin">
                     <div class="card-body">
                         <h5 class="card-title">Joëlle MÉLIN</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -796,7 +828,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center DLF ELDD" data-percentage="5" data-alphabetical="23">
                 <div class="card">
-                    <img src="./img/Bernard Monot 680x530_opt.jpg" class="card-img-top" alt="photo de bernard monot">
+                    <img src="./img/60.jpg" class="card-img-top" alt="photo de bernard monot">
                     <div class="card-body">
                         <h5 class="card-title">Bernard MONOT</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Debout La France)</p>
@@ -808,7 +840,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center SE NI" data-percentage="4.72" data-alphabetical="22">
                 <div class="card">
-                    <img src="./img/sophie montel 680x530_opt.jpg" class="card-img-top" alt="photo de sophie montel">
+                    <img src="./img/61.jpg" class="card-img-top" alt="photo de sophie montel">
                     <div class="card-body">
                         <h5 class="card-title">Sophie MONTEL</h5>
                         <p class="card-text">Non-Inscrits</br></br>(Sans Étiquette)</p>
@@ -820,7 +852,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="21">
                 <div class="card">
-                    <img src="./img/Nadine Morano 680x530_opt.jpg" class="card-img-top" alt="photo de nadine morano">
+                    <img src="./img/62.jpg" class="card-img-top" alt="photo de nadine morano">
                     <div class="card-body">
                         <h5 class="card-title">Nadine MORANO</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -832,7 +864,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center AG PPE" data-percentage="1.66" data-alphabetical="20">
                 <div class="card">
-                    <img src="./img/Elisabeth Morin Chartier 680x530_opt.jpg" class="card-img-top" alt="photo de elisabeth morin-chartier">
+                    <img src="./img/63.jpg" class="card-img-top" alt="photo de elisabeth morin-chartier">
                     <div class="card-body">
                         <h5 class="card-title">Elisabeth MORIN-CHARTIER</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Agir)</p>
@@ -844,7 +876,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.63" data-alphabetical="19">
                 <div class="card">
-                    <img src="./img/Renaud Muselier 680x530_opt.jpg" class="card-img-top" alt="photo de Renaud Muselier">
+                    <img src="./img/64.jpg" class="card-img-top" alt="photo de Renaud Muselier">
                     <div class="card-body">
                         <h5 class="card-title">Renaud MUSELIER</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -856,7 +888,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center FI GUE" data-percentage="15.13" data-alphabetical="18">
                 <div class="card">
-                    <img src="./img/Younous Omarjee 680x530_opt.jpg" class="card-img-top" alt="photo de Younous Omarjee">
+                    <img src="./img/65.jpg" class="card-img-top" alt="photo de Younous Omarjee">
                     <div class="card-body">
                         <h5 class="card-title">Younous OMARJEE</h5>
                         <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(La France Insoumise)</p>
@@ -868,7 +900,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="9.16" data-alphabetical="17">
                 <div class="card">
-                    <img src="./img/Gilles Pargneaux 680x530_opt.jpg" class="card-img-top" alt="photo de gilles pargneaux">
+                    <img src="./img/66.jpg" class="card-img-top" alt="photo de gilles pargneaux">
                     <div class="card-body">
                         <h5 class="card-title">Gilles PARGNEAUX</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -880,7 +912,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="8.33" data-alphabetical="16">
                 <div class="card">
-                    <img src="./img/Vincent Peillon 680x530_opt.jpg" class="card-img-top" alt="photo de vincent peillon">
+                    <img src="./img/67.jpg" class="card-img-top" alt="photo de vincent peillon">
                     <div class="card-body">
                         <h5 class="card-title">Vincent PEILLON</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -892,7 +924,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LP ELDD" data-percentage="4.86" data-alphabetical="15">
                 <div class="card">
-                    <img src="./img/Florian Philippot 680x530_opt.jpg" class="card-img-top" alt="photo de Florian Philippot">
+                    <img src="./img/68.jpg" class="card-img-top" alt="photo de Florian Philippot">
                     <div class="card-body">
                         <h5 class="card-title">Florian PHILIPPOT</h5>
                         <p class="card-text">Groupe Europe de la Liberté et de la Démocratie Directe</br>(Les Patriotes)</p>
@@ -904,7 +936,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="2.5" data-alphabetical="14">
                 <div class="card">
-                    <img src="./img/Maurice Ponga 680x530_opt.jpg" class="card-img-top" alt="photo de maurice ponga">
+                    <img src="./img/69.jpg" class="card-img-top" alt="photo de maurice ponga">
                     <div class="card-body">
                         <h5 class="card-title">Maurice PONGA</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -916,7 +948,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.80" data-alphabetical="13">
                 <div class="card">
-                    <img src="./img/Franck Proust 680x530_opt.jpg" class="card-img-top" alt="photo de franck proust">
+                    <img src="./img/70.jpg" class="card-img-top" alt="photo de franck proust">
                     <div class="card-body">
                         <h5 class="card-title">Franck PROUST</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -928,7 +960,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PS SD" data-percentage="8.61" data-alphabetical="12">
                 <div class="card">
-                    <img src="./img/Christine Revault D'Allonnes 680x530_opt.jpg" class="card-img-top" alt="photo de christine revault">
+                    <img src="./img/71.jpg" class="card-img-top" alt="photo de christine revault">
                     <div class="card-body">
                         <h5 class="card-title">Christine REVAULT</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Parti Socialiste)</p>
@@ -940,7 +972,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MR ALDE" data-percentage="7.5" data-alphabetical="11">
                 <div class="card">
-                    <img src="./img/Dominique Riquet 680x530_opt.jpg" class="card-img-top" alt="photo de dominique riquet">
+                    <img src="./img/72.jpg" class="card-img-top" alt="photo de dominique riquet">
                     <div class="card-body">
                         <h5 class="card-title">Dominique RIQUET</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(Mouvement Radical)</p>
@@ -952,7 +984,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center EELV VALE" data-percentage="17.91" data-alphabetical="10">
                 <div class="card">
-                    <img src="./img/Michèle Rivasi 680x530_opt.jpg" class="card-img-top" alt="photo de michèle rivasi">
+                    <img src="./img/73.jpg" class="card-img-top" alt="photo de michèle rivasi">
                     <div class="card-body">
                         <h5 class="card-title">Michèle RIVASI</h5>
                         <p class="card-text">Groupe Les Verts / Alliance Libre Européenne</br>(Europe Ecologie Les Verts)</p>
@@ -964,7 +996,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center MD ALDE" data-percentage="11.80" data-alphabetical="9">
                 <div class="card">
-                    <img src="./img/Robert Rochefort 680x530_opt.jpg" class="card-img-top" alt="photo de robert rochefort">
+                    <img src="./img/74.jpg" class="card-img-top" alt="photo de robert rochefort">
                     <div class="card-body">
                         <h5 class="card-title">Robert ROCHEFORT</h5>
                         <p class="card-text">Alliance des Démocrates et des Libéraux pour l'Europe</br>(MoDem)</p>
@@ -976,7 +1008,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LRDG SD" data-percentage="8.61" data-alphabetical="8">
                 <div class="card">
-                    <img src="./img/Virginie Rozière 680x530_opt.jpg" class="card-img-top" alt="photo de virginie roziere">
+                    <img src="./img/75.jpg" class="card-img-top" alt="photo de virginie roziere">
                     <div class="card-body">
                         <h5 class="card-title">Virginie ROZIÈRE</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Les Radicaux de Gauche)</p>
@@ -988,7 +1020,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center AG PPE" data-percentage="1.66" data-alphabetical="7">
                 <div class="card">
-                    <img src="./img/Tokia Saïfi 680x530_opt.jpg" class="card-img-top" alt="photo de tokia saifi">
+                    <img src="./img/76.jpg" class="card-img-top" alt="photo de tokia saifi">
                     <div class="card-body">
                         <h5 class="card-title">Tokia SAÏFI</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Agir)</p>
@@ -1000,7 +1032,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center LR PPE" data-percentage="1.66" data-alphabetical="6">
                 <div class="card">
-                    <img src="./img/Anne Sander 680x530_opt.jpg" class="card-img-top" alt="photo de anne sander">
+                    <img src="./img/77.jpg" class="card-img-top" alt="photo de anne sander">
                     <div class="card-body">
                         <h5 class="card-title">Anne SANDER</h5>
                         <p class="card-text">Parti Populaire Européen</br></br>(Les Républicains)</p>
@@ -1012,7 +1044,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="5">
                 <div class="card">
-                    <img src="./img/Jean-Luc Schaffhauser 680x530_opt.jpg" class="card-img-top" alt="photo de jean-luc schaffhauser">
+                    <img src="./img/78.jpg" class="card-img-top" alt="photo de jean-luc schaffhauser">
                     <div class="card-body">
                         <h5 class="card-title">Jean-Luc SCHAFFHAUSER</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -1024,7 +1056,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center GS SD" data-percentage="8.88" data-alphabetical="4">
                 <div class="card">
-                    <img src="./img/isabelle thomas 680x530_opt.jpg" class="card-img-top" alt="photo de Isabelle Thomas">
+                    <img src="./img/79.jpg" class="card-img-top" alt="photo de Isabelle Thomas">
                     <div class="card-body">
                         <h5 class="card-title">Isabelle THOMAS</h5>
                         <p class="card-text">Alliance Progressiste des Socialistes et Démocrates</br>(Génération.s)</p>
@@ -1036,7 +1068,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center RN ENL" data-percentage="5" data-alphabetical="3">
                 <div class="card">
-                    <img src="./img/Mylène Troszczynski 680x530_opt.jpg" class="card-img-top" alt="photo de mylene troszczynski">
+                    <img src="./img/80.jpg" class="card-img-top" alt="photo de mylene troszczynski">
                     <div class="card-body">
                         <h5 class="card-title">Mylène TROSZCZYNSKI</h5>
                         <p class="card-text">Groupe Europe des Nations et des Libertés</br>(Rassemblement National)</p>
@@ -1048,7 +1080,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PCF GUE" data-percentage="12.91" data-alphabetical="2">
                 <div class="card">
-                    <img src="./img/Marie-Christine Vergiat 680x530_opt.jpg" class="card-img-top" alt="photo de Marie-Christine Vergiat">
+                    <img src="./img/81.jpg" class="card-img-top" alt="photo de Marie-Christine Vergiat">
                     <div class="card-body">
                         <h5 class="card-title">Marie-Christine VERGIAT</h5>
                         <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(Parti Communiste Français)</p>
@@ -1060,7 +1092,7 @@
             </div>
             <div class="card-container col-12 col-md-6 col-lg-3 text-center PCF GUE" data-percentage="9.36" data-alphabetical="1">
                 <div class="card">
-                    <img src="./img/Marie-Pierre Vieu 680x530_opt.jpg" class="card-img-top" alt="photo de Marie-Pierre Vieu">
+                    <img src="./img/82.jpg" class="card-img-top" alt="photo de Marie-Pierre Vieu">
                     <div class="card-body">
                         <h5 class="card-title">Marie-Pierre VIEU</h5>
                         <p class="card-text">Gauche Unitaire Européenne / Gauche Verte Nordique</br>(Parti Communiste Européen)</p>
@@ -1075,10 +1107,7 @@
     <footer class="container my-4">
         <div class="row">
             <div class="col-12 text-center">
-                <img class="img-float1" src="./img/tortue.jpg" alt="logo de tortue"/>
-                <img class="img-float2" src="./img/cropped fish" alt="logo de poisson"/>
-                <img class="img-float3" src="./img/octopus.png" alt="logo de pieuvre"/>
-                <a href="https://www.bloomassociation.org/" target="_blank"></br>En savoir plus sur Bloom</a>
+                <a href="https://www.bloomassociation.org/" target="_blank"><img class="img-float1" src="./img/Animation_ok_Bloom.gif" alt="poulpe de bloom"/></a>
             </div>
         </div>
         <div class="row">

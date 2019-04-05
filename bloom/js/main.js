@@ -36,6 +36,23 @@ $(document).ready(function(){
         return +b.dataset.alphabetical - +a.dataset.alphabetical;
       }).appendTo($('.ranking-group'));
     })
+
+    // BACK TO TOP BUTTON //
+    var btn = $('#button-backToTop');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+
 });
 
 
