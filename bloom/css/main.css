@@ -41,11 +41,15 @@ h4 {
 
 h6 {
     color :#4C6784;
-    font-size : 0.4em;
+    font-size : 0.9em;
 }
 
 h7 { 
     color : #E31C67;
+}
+
+h8 {
+    font-weight: bold;
 }
 
 .fas {
@@ -55,6 +59,7 @@ h7 {
 .card {
     transition: transform 0.3s;
     margin: 10px 0px;
+    font-size : 15px;
 }
 
 .card:hover {
@@ -68,6 +73,7 @@ h7 {
 
 .btn-secondary {
     background-color: #4C6784;
+    font-family: oswald;
 }
 
 .btn-secondary:hover {
@@ -99,27 +105,40 @@ h7 {
 }
 
 #explication-note {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Ubuntu;
     font-size: 13px;
 }
 
+.methodo {
+    font-family: Oswald;
+    font-size : 17px;
+}
+
+.unbuntu-link {
+    font-family : Ubuntu;
+    font-weight: 300;
+}
+
 .explication {
-    font-family: ubuntu;
-    font-size: 14px
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .signature {
     padding-top: 10px;
     font-size: 10px;
+    font-family: Ubuntu;
+    font-weight: 300;
 }
 
 .img-cliquez {
-    width: 500px;
+    width: 340px;
 }
 
 .legende {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .légende-titre {
@@ -142,23 +161,21 @@ h7 {
     color: orange;
 }
 
-.inactif {
-    font-size : 0.9em;
-}
-
 a {
     color: #708EA1;
-    font-family: oswald;
+    font-family: Ubuntu;
 }
 
 .mentions-legales {
-    font-family: ubuntu;
+    font-family: Ubuntu;
+    font-weight: 300;
+    font-size : 14px;
 }
 
 .theme {
     padding : 10px;
     color : black;
-    font-family: ubuntu;  
+    font-family: Ubuntu;  
     text-align: center;
 }
 
@@ -170,6 +187,23 @@ a {
     font-variant: small-caps;
     text-align: center;
     color : #708EA1;
+}
+
+.t-description {
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sous-theme {
+    font-family : Oswald;
+    color : #708EA1;
+    font-variant: small-caps;
+    font-size : 20px;
+}
+
+.revault {
+    font-size : 18px;
 }
 
 /*
@@ -257,12 +291,16 @@ a {
     border: 5px solid orange
 }
 
+.inactif {
+    border: 5px solid black;
+}
+
 .absent {
     text-align: center;
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: orange 
+    color: black; 
 }
 
 .good-vote-full {
@@ -275,6 +313,7 @@ a {
 
 .vote {
     text-align : center;
+    margin-right: 30px;
 }
 
 .front {
@@ -288,8 +327,9 @@ a {
     transform: rotateY(180deg);
     color: black;
     background: #DBE0E4;
-    font-size: 15px;
-    font-family: ubuntu;
+    font-size: 13px;
+    font-family: Ubuntu;
+    font-weight: 300;
 }
 
 
